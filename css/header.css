@@ -1,4 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1D2F30;
 
+}
+
+.nav {
+    display: none;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+}
 
 
 

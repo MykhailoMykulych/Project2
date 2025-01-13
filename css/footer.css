@@ -1,4 +1,24 @@
+.footer {
+    max-width: 1920px;
+}
+
+.footer__items {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background: #0b1919;
+}
+
 .hover-icon:hover path {
-    fill: #BAE249;
-  }
-  
+  fill: #bae249;
+  cursor: pointer;
+}
+
+.footer__text {
+    text-align: center;
+    padding: 10px;
+    background: #1D2F30;
+    color: #899D9D;
+}

@@ -1,10 +1,10 @@
 .hero {
-  background-image: url("https://live.verstaem.online/f&b/img/hero-bg.jpg");
-  background-size: cover; /* Ensures the image covers the entire viewport */
-  /* background-position: center; Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  padding-top: 115px;
-  padding-bottom: 115px;
+  max-width: 1920px;
+  background-image: url("../pictures/banner-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 115px 164px 115px;
 }
 
 .hero__container {
@@ -29,6 +29,8 @@
 }
 
 .hero__link {
+  display: flex;
+  align-items: center;
   margin-top: 24px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
@@ -40,4 +42,9 @@
 
 .hero__link:hover {
   color: #91ac46;
+  cursor: pointer;
+}
+
+.hero__link-icon:hover {
+  fill: #91ac46;
 }

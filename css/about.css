@@ -1,0 +1,63 @@
+.about {
+  max-width: 1920px;
+  background: #1d2f30;
+  padding: 60px 160px 60px;
+}
+
+.about__title {
+  font-family: "Cormorant", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 46px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.about__container {
+  display: flex;
+  gap: 30px;
+}
+
+.about__img {
+    background: #0B1919;
+}
+
+.about__img-item {
+    width: 77%;
+}
+
+.about__card {
+    width: 33%;
+    background: #BAE249;
+    padding: 16px 16px 24px;
+}
+
+.about__card-subtitle {
+  font-family: "Cormorant", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #1D2F30;
+}
+
+.about__card-descr {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #506829;
+  margin-top: 8px;
+}
+
+.about__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 75px;
+}
+
+.about__link:hover  {
+color: #688B05;
+cursor: pointer;
+}

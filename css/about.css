@@ -1,7 +1,12 @@
 .about {
-  max-width: 1920px;
-  background: #1d2f30;
-  padding: 60px 160px 60px;
+  padding: 60px 0;
+}
+
+.about__container {
+  max-width: 1174px;
+  padding-inline: 32px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .about__title {
@@ -10,27 +15,34 @@
   font-weight: 700;
   font-size: 48px;
   line-height: 46px;
-  color: #ffffff;
-  margin-bottom: 30px;
+  color: #fff;
 }
 
-.about__container {
+.about__info {
+  margin-top: 30px;
   display: flex;
+  flex-direction: column;
   gap: 30px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .about__img {
-    background: #0B1919;
-}
-
-.about__img-item {
-    width: 77%;
+  width: 100%;
+  min-height: 493px;
+  background: url('../pictures/about-card.png') no-repeat left center/100% #0B1919;
 }
 
 .about__card {
-    width: 33%;
+    flex: 1 0 auto;
     background: #BAE249;
     padding: 16px 16px 24px;
+
+    @media (min-width: 768px) {
+      flex: 1 0 255px;
+    }
 }
 
 .about__card-subtitle {
@@ -42,7 +54,6 @@
 }
 
 .about__card-descr {
-  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -55,9 +66,9 @@
   align-items: center;
   gap: 8px;
   margin-top: 75px;
+  cursor: pointer;
 }
 
 .about__link:hover  {
-color: #688B05;
-cursor: pointer;
+  color: #688B05;
 }

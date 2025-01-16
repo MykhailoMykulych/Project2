@@ -10,22 +10,35 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/reset.css" />
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
     <link rel="stylesheet" href="./css/style.css" />
     <title>Nature</title>
   </head>
   <body>
     <!-- =========== header.css =============== -->
-    <header>
-      <div class="header">
-        <div class="logo"><img src="pictures/logo.svg" /></div>
-        <div class="nav">
-          <a class="nav__button">Каталог</a>
-          <a class="nav__button">Галерея</a>
-          <a class="nav__button">О лаборатории</a>
-          <a class="nav__button">Контакты</a>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="pictures/logo.svg" />
         </div>
-        <div class="buttons-container">
-          <p class="buttons-container__button">
+        <ul class="header__nav">
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-item-link">Каталог</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-item-link">Галерея</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-item-link">О лаборатории</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-item-link">Контакты</a>
+          </li>
+        </ul>
+        <div class="header__controls">
+          <div class="header__controls-button">
             <svg
               width="32"
               height="38"
@@ -48,8 +61,8 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </p>
-          <p class="buttons-container__button">
+          </div>
+          <div class="header__controls-button">
             <svg
               width="27"
               height="32"
@@ -79,7 +92,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </p>
+          </div>
         </div>
       </div>
     </header>
@@ -87,100 +100,171 @@
       <!-- ===========    hero.css  ================= -->
       <section class="hero">
         <div class="hero__container">
-          <h1 class="hero__title">Крупнейшая коллекция природных артефактов</h1>
-          <p class="hero__descr">
-            Являясь всего лишь частью общей картины, интерактивные прототипы,
-            которые представляют собой яркий пример европейского типа
-            политической и социальной культуры.
-          </p>
-          <div class="hero__link">
-            <p href="#" class="hero__link-title">Исследовать</p>
-            <svg
-              width="44"
-              height="15"
-              viewBox="0 0 44 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="hero__link-icon"
-            >
-              <path
-                fill="currentColor"
-                d="M43.7071 8.20711C44.0976 7.81658 44.0976 7.18342 43.7071 6.79289L37.3431 0.428932C36.9526 0.0384078 36.3195 0.0384078 35.9289 0.428932C35.5384 0.819457 35.5384 1.45262 35.9289 1.84315L41.5858 7.5L35.9289 13.1569C35.5384 13.5474 35.5384 14.1805 35.9289 14.5711C36.3195 14.9616 36.9526 14.9616 37.3431 14.5711L43.7071 8.20711ZM0 8.5L43 8.5V6.5L0 6.5L0 8.5Z"
-              />
-            </svg>
+          <div class="hero__container-info">
+            <h1 class="hero__title">
+              Крупнейшая коллекция природных артефактов
+            </h1>
+            <div class="hero__descr">
+              Являясь всего лишь частью общей картины, интерактивные прототипы,
+              которые представляют собой яркий пример европейского типа
+              политической и социальной культуры.
+            </div>
+            <div class="hero__link">
+              <p href="#" class="hero__link-title">Исследовать</p>
+              <svg
+                width="44"
+                height="15"
+                viewBox="0 0 44 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="hero__link-icon"
+              >
+                <path
+                  fill="currentColor"
+                  d="M43.7071 8.20711C44.0976 7.81658 44.0976 7.18342 43.7071 6.79289L37.3431 0.428932C36.9526 0.0384078 36.3195 0.0384078 35.9289 0.428932C35.5384 0.819457 35.5384 1.45262 35.9289 1.84315L41.5858 7.5L35.9289 13.1569C35.5384 13.5474 35.5384 14.1805 35.9289 14.5711C36.3195 14.9616 36.9526 14.9616 37.3431 14.5711L43.7071 8.20711ZM0 8.5L43 8.5V6.5L0 6.5L0 8.5Z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </section>
       <!-- ===========    gallery.css  ================= -->
       <section class="gallery">
-        <div class="gallery-container">
-          <div class="card">
-            <div class="card__image">
-              <div class="card__image-number">
-                <span>3.1</span>
+        <div class="gallery__container">
+          <div class="gallery__slider">
+            <div class="card">
+              <div class="card__image">
+                <div class="card__image-number">
+                  <span>3.1</span>
+                </div>
+                <img src="/pictures/layer-1.png" />
               </div>
-              <img src="/pictures/layer-1.png" />
+              <div class="card__content">
+                <div class="card__title">Fig. 1 (plant)</div>
+                <div class="card__descr">
+                  Имеется спорная точка зрения, гласящая примерно следующее:
+                  активно развивающиеся страны третьего мира своевременно
+                  верифицированы.
+                </div>
+                <button class="card__btn">Подробнее</button>
+              </div>
             </div>
-            <div class="card__content">
-              <div class="card__title">Fig. 1 (plant)</div>
-              <div class="card__descr">
-                Имеется спорная точка зрения, гласящая примерно следующее:
-                активно развивающиеся страны третьего мира своевременно
-                верифицированы.
+            <div class="card">
+              <div class="card__image">
+                <div class="card__image-number">
+                  <span>3.1</span>
+                </div>
+                <img src="/pictures/layer-2.png" />
               </div>
-              <button class="card__btn">Подробнее</button>
+              <div class="card__content">
+                <div class="card__title">Fig. 1 (plant)</div>
+                <div class="card__descr">
+                  Прежде всего, синтетическое тестирование влечет за собой
+                  процесс внедрения и модернизации условий.
+                </div>
+                <button class="card__btn">Подробнее</button>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card__image">
-              <div class="card__image-number">
-                <span>3.1</span>
+            <div class="card">
+              <div class="card__image">
+                <div class="card__image-number">
+                  <span>3.1</span>
+                </div>
+                <img src="/pictures/layer-3.png" />
               </div>
-              <img src="/pictures/layer-2.png" />
+              <div class="card__content">
+                <div class="card__title">Fig. 1 (plant)</div>
+                <div class="card__descr">
+                  Лишь непосредственные участники прогресса неоднозначны и будут
+                  в равной степени предоставлены сами себе для работы.
+                </div>
+                <button class="card__btn">Подробнее</button>
+              </div>
             </div>
-            <div class="card__content">
-              <div class="card__title">Fig. 1 (plant)</div>
-              <div class="card__descr">
-                Прежде всего, синтетическое тестирование влечет за собой процесс
-                внедрения и модернизации условий.
+            <div class="card">
+              <div class="card__image">
+                <div class="card__image-number">
+                  <span>3.1</span>
+                </div>
+                <img src="/pictures/layer-4.png" />
               </div>
-              <button class="card__btn">Подробнее</button>
+              <div class="card__content">
+                <div class="card__title">Fig. 1 (plant)</div>
+                <div class="card__descr">
+                  Базовый вектор развития не даёт нам иного выбора, кроме
+                  определения новых предложений.
+                </div>
+                <button class="card__btn">Подробнее</button>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card__image">
-              <div class="card__image-number">
-                <span>3.1</span>
+            <div class="card">
+              <div class="card__image">
+                <div class="card__image-number">
+                  <span>3.1</span>
+                </div>
+                <img src="/pictures/layer-1.png" />
               </div>
-              <img src="/pictures/layer-3.png" />
+              <div class="card__content">
+                <div class="card__title">Fig. 1 (plant)</div>
+                <div class="card__descr">
+                  Имеется спорная точка зрения, гласящая примерно следующее:
+                  активно развивающиеся страны третьего мира своевременно
+                  верифицированы.
+                </div>
+                <button class="card__btn">Подробнее</button>
+              </div>
             </div>
-            <div class="card__content">
-              <div class="card__title">Fig. 1 (plant)</div>
-              <div class="card__descr">
-                Лишь непосредственные участники прогресса неоднозначны и будут в
-                равной степени предоставлены сами себе для работы.
+            <div class="card">
+              <div class="card__image">
+                <div class="card__image-number">
+                  <span>3.1</span>
+                </div>
+                <img src="/pictures/layer-2.png" />
               </div>
-              <button class="card__btn">Подробнее</button>
+              <div class="card__content">
+                <div class="card__title">Fig. 1 (plant)</div>
+                <div class="card__descr">
+                  Прежде всего, синтетическое тестирование влечет за собой
+                  процесс внедрения и модернизации условий.
+                </div>
+                <button class="card__btn">Подробнее</button>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card__image">
-              <div class="card__image-number">
-                <span>3.1</span>
+            <div class="card">
+              <div class="card__image">
+                <div class="card__image-number">
+                  <span>3.1</span>
+                </div>
+                <img src="/pictures/layer-3.png" />
               </div>
-              <img src="/pictures/layer-4.png" />
+              <div class="card__content">
+                <div class="card__title">Fig. 1 (plant)</div>
+                <div class="card__descr">
+                  Лишь непосредственные участники прогресса неоднозначны и будут
+                  в равной степени предоставлены сами себе для работы.
+                </div>
+                <button class="card__btn">Подробнее</button>
+              </div>
             </div>
-            <div class="card__content">
-              <div class="card__title">Fig. 1 (plant)</div>
-              <div class="card__descr">
-                Базовый вектор развития не даёт нам иного выбора, кроме
-                определения новых предложений.
+            <div class="card">
+              <div class="card__image">
+                <div class="card__image-number">
+                  <span>3.1</span>
+                </div>
+                <img src="/pictures/layer-4.png" />
               </div>
-              <button class="card__btn">Подробнее</button>
+              <div class="card__content">
+                <div class="card__title">Fig. 1 (plant)</div>
+                <div class="card__descr">
+                  Базовый вектор развития не даёт нам иного выбора, кроме
+                  определения новых предложений.
+                </div>
+                <button class="card__btn">Подробнее</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="arrows">
+        <!-- <div class="arrows">
           <svg
             width="26"
             height="16"
@@ -206,15 +290,14 @@
               fill="#899D9D"
             />
           </svg>
-        </div>
+        </div> -->
       </section>
       <!-- ===========    about .css  ================= -->
       <section class="about">
-        <h2 class="about__title">Новые артефакты</h2>
         <div class="about__container">
-          <div class="about__img">
-            <img src="pictures/about-card.png" class="about__img-item" />
-          </div>
+          <h2 class="about__title">Новые артефакты</h2>
+        <div class="about__info">
+          <div class="about__img"></div>
           <div class="about__card">
             <div class="about__card-subtitle">Kurische Nehrung 24</div>
             <div class="about__card-descr">
@@ -241,32 +324,35 @@
             </div>
           </div>
         </div>
+        </div>
       </section>
-      <!-- ============= contact.css ==================== -->
-      <section class="contact">
-        <div class="contact__container">
-          <div class="contact__header">
-            <div class="contact__title">Помочь проекту</div>
-            <div class="contact__descr">
+      <!-- ============= hero.css ==================== -->
+      <section class="hero hero--contacts">
+        <div class="hero__container">
+          <div class="hero__container-info">
+            <h1 class="hero__title">
+              Помочь проекту
+            </h1>
+            <div class="hero__descr">
               Равным образом, экономическая повестка сегодняшнего дня не даёт
               нам иного выбора, кроме определения прогресса профессионального
               сообщества. Как принято считать, элементы политического процесса
               рассмотрены исключительно в разрезе маркетинговых и финансовых
               предпосылок.
             </div>
-          </div>
-          <div class="form">
-            <label class="form__label">
-              <input type="text" placeholder="Имя" class="form__label-input" />
-            </label>
-            <label class="form__label">
-              <input
-                type="email"
-                placeholder="Email"
-                class="form__label-input"
-              />
-            </label>
-            <button class="form__button">Отправить</button>
+            <div class="hero__form">
+              <label class="hero__form-label">
+                <input type="text" placeholder="Имя" class="hero__form-label-input" />
+              </label>
+              <label class="hero__form-label">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="hero__form-label-input"
+                />
+              </label>
+              <button class="hero__form-button">Отправить</button>
+            </div>
           </div>
         </div>
       </section>
@@ -329,5 +415,41 @@
       </div>
       <div class="footer__text">f&b ® 2020</div>
     </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.gallery__slider').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          mobileFirst: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                dots: false,
+                arrows: true,
+              }
+            },
+            {
+              breakpoint: 1280,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                dots: false,
+                arrows: true,
+              }
+            }
+          ]
+        });
+      });
+    </script>
   </body>
 </html>
